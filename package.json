@@ -1,0 +1,38 @@
+{
+  "name": "char-source",
+  "version": "0.0.0",
+  "description": "Trace characters back to their source locations in JavaScript literals",
+  "license": "ISC",
+  "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/origin-1/char-source.git"
+  },
+  "scripts": {
+    "build": "npm install && npm run build-no-install",
+    "build-no-install": "npm run clean && npm run lint && npm run coverage",
+    "clean": "node dev/clean.mjs",
+    "coverage": "node dev/coverage.mjs",
+    "lint": "eslint . --format compact",
+    "release": "npm version -m \"Version %s\"",
+    "test": "mocha --check-leaks spec.js"
+  },
+  "devDependencies": {
+    "@origin-1/eslint-config": "^0.22.1",
+    "c8js": "^0.6.1",
+    "eslint": "^8.56.0",
+    "globals": "^13.24.0",
+    "mocha": "^10.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "lib/index.d.ts"
+}
