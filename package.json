@@ -1,7 +1,7 @@
 {
   "name": "char-source",
   "version": "0.0.0",
-  "description": "Trace characters back to their source locations in JavaScript literals",
+  "description": "Trace characters back to their source locations in JavaScript literals.",
   "license": "ISC",
   "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",
   "files": [
